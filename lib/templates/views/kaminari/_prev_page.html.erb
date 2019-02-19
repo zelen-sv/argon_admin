@@ -1,0 +1,8 @@
+<% unless current_page.first? %>
+<span class="page-item">
+  <%= link_to url, rel: 'prev', remote: remote, class: "page-link"  do %>
+    <i class="fa fa-angle-left"></i>
+    <span class="sr-only">Previous</span>
+  <% end %>
+</span>
+<% end %>

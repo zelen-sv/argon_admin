@@ -1,0 +1,8 @@
+<% unless current_page.last? %>
+<span class="page-item">
+  <%= link_to url, rel: 'next', remote: remote, class: "page-link"  do %>
+    <i class="fa fa-angle-right"></i>
+    <span class="sr-only">Next</span>
+  <% end %>
+</span>
+<% end %>

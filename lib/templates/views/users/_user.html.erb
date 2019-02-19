@@ -1,0 +1,9 @@
+<tr>
+  <td><%= user.email %></td>
+  <td><%= l user.created_at, format: :long %></td>
+  <td class="table-actions-td">
+    <%= link_to edit_admin_user_path(user), class: "btn btn-sm btn-outline-info" do %>
+      <i class="fa fa-edit"></i> Edit
+    <% end %>
+  </td>
+</tr>

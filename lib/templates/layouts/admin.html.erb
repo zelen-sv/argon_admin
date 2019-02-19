@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin panel</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= render 'admin/shared/sidebar' %>
+    <div class="main-content">
+      <%= render 'admin/shared/navbar' %>
+      <%= render 'admin/shared/header' %>
+      <div class="container-fluid mt--7">
+        <%= render 'admin/shared/alert' %>
+        <%= yield %>
+        <%= render 'admin/shared/footer' %>
+      </div>
+    </div>
+  </body>
+  <%= javascript_include_tag 'admin' %>
+</html>

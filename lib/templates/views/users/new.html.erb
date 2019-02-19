@@ -1,0 +1,23 @@
+<% content_for :header_body do %>
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="display-2 text-white">Сreate new user</h1>
+    <%= link_to 'Back to users', admin_users_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card bg-secondary shadow">
+      <div class="card-header bg-white border-0">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">User information</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <%= render 'user-form', { user: @user } %>
+      </div>
+    </div>
+  </div>
+</div>

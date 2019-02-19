@@ -1,0 +1,42 @@
+<% content_for :header_body do %>
+  <div class="container">
+    <div class="col-md-7">
+      <h1 class="display-2 text-white">Users information</h1>
+      <p class="text-white mt-0 mb-2">This is your users page.</p>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col">
+    <div class="card shadow">
+      <div class="card-header border-0">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">Users table</h3>
+          </div>
+          <div class="col-4 text-right">
+            <%= link_to 'Create new', new_admin_user_path, class: 'btn btn-sm btn-success' %>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">E-mail</th>
+              <th scope="col">Created at</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @users %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer py-4">
+        <%= paginate @users %>
+      </div>
+    </div>
+  </div>
+</div>
