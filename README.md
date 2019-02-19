@@ -20,7 +20,10 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'argon_admin'
 ```
+And then execute:
 
+    $ bundle i
+    
 Next, you need to run the generator:
 
     $ rails argon_admin:install
