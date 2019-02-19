@@ -1,8 +1,17 @@
-# AdminPanel
+# ArgonAdmin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/argon_admin`. To experiment with that code, run `bin/console` for an interactive prompt.
+Simple admin panel generator with the [Argon Dashboard theme](https://github.com/creativetimofficial/argon-dashboard) for your new project.
 
-TODO: Delete this and the text above, and describe your gem
+![](https://i.ibb.co/DGHc4Q0/argon-dashboard.jpg)
+
+Main features included by default:
+
+- Authentication with [Devise](https://github.com/plataformatec/devise).
+- [Argon Dashboard theme](https://github.com/creativetimofficial/argon-dashboard) theme included for the admin panel.
+- ERB template engine.
+- Pagination with [Kaminari](https://github.com/kaminari/kaminari)
+- [Simple form](https://github.com/plataformatec/simple_form) integration
+- Сustomized flash messages
 
 ## Installation
 
@@ -12,24 +21,19 @@ Add this line to your application's Gemfile:
 gem 'argon_admin'
 ```
 
-And then execute:
+Next, you need to run the generator:
 
-    $ bundle
+    $ rails argon_admin:install
+    
+Generate devise user:
 
-Or install it yourself as:
+    $ rails db:migrate
+    $ rails db:seed
+    
+And you're ready to go. Test if all it's ok by starting a server and check it with rails s.
 
-    $ gem install argon_admin
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Default admin user with email admin@example.com and password 123456789
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/argon_admin.
+Bug reports and pull requests are welcome on GitHub at https://github.com/zelen-sv/argon_admin.
