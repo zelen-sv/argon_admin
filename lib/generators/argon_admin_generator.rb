@@ -77,7 +77,7 @@ class ArgonAdminGenerator < Rails::Generators::Base
 
   def update_seeds_file
     append_to_file 'db/seeds.rb' do
-      "User.create!(email: 'admin@gmail.com', password: '987654321', password_confirmation: '987654321')"
+      "User.create!(email: 'admin@example.com', password: '123456789', password_confirmation: '123456789')"
     end
   end
 end
