@@ -1,3 +1,5 @@
+require 'rails/generators'
+
 class ArgonAdminGenerator < Rails::Generators::Base
   include Singleton
   source_root File.expand_path("../templates", __dir__)
